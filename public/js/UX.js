@@ -269,3 +269,10 @@ function escapeHtml(unsafe) {
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
 }
+
+$(document).tooltip({
+    show: null,
+    track: true,
+    hide: false,
+    tooltipClass: "custom-tooltip-styling",
+  });
