@@ -73,10 +73,10 @@ function setupUI() {
     });
     document.getElementById('canvasArea').oncontextmenu = showContextMenu;
 
-    $("#sideBar").resizable({
-        handles: 'e',
-        // minWidth:270,
-    });
+    // $("#sideBar").resizable({
+    //     handles: 'e',
+    //     // minWidth:270,
+    // });
     $("#menu").accordion({
         collapsible: true,
         active: false,
@@ -251,7 +251,7 @@ function showProperties(obj) {
             "</select>"
         );
         $("#moduleProperty-inner").append(
-          "<p>Direction: " + $(s).prop("outerHTML") + "</p>"
+          "<p><span>Direction:</span> " + $(s).prop("outerHTML") + "</p>"
         );
       } else if (!obj.orientationFixed) {
         var s = $(
@@ -319,7 +319,7 @@ function showProperties(obj) {
     var helplink = obj && obj.helplink;
     if (helplink) {
       $("#moduleProperty-inner").append(
-        '<p><button id="HelpButton" class="btn btn-primary btn-xs" type="button" >Help &#9432</button></p>'
+        '<p class="help-btn-parent" ><button id="HelpButton" class="btn btn-primary btn-xs" type="button" >Help &#9432</button></p>'
       );
       $("#HelpButton").click(function () {
         window.open(helplink);
