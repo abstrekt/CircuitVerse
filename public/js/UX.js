@@ -305,7 +305,7 @@ function showProperties(obj) {
             $("#moduleProperty-inner").append(s);
           } else if (obj.mutableProperties[attr].type == "button") {
             var s =
-              "<p><button class='objectPropertyAttribute btn btn-primary btn-xs' type='button'  name='" +
+              "<p class='btn-parent'><button class='objectPropertyAttribute btn custom-btn--secondary' type='button'  name='" +
               prop.func +
               "'>" +
               prop.name +
@@ -319,7 +319,7 @@ function showProperties(obj) {
     var helplink = obj && obj.helplink;
     if (helplink) {
       $("#moduleProperty-inner").append(
-        '<p class="help-btn-parent" ><button id="HelpButton" class="btn btn-primary btn-xs" type="button" >Help &#9432</button></p>'
+        '<p class="btn-parent" ><button id="HelpButton" class="btn btn-primary btn-xs" type="button" >Help &#9432</button></p>'
       );
       $("#HelpButton").click(function () {
         window.open(helplink);
