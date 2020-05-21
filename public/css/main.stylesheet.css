@@ -752,3 +752,43 @@ select > option:focus {
 }
 
 /*! selects styling end here */
+
+/** input type number styles starts here */
+.input-number--parent {
+
+}
+
+/* .input-number {
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.input-number:hover,
+.input-number:focus {
+    background-color: #454545;
+    color: white;
+
+} */
+
+.nice-number {
+    display: inline-flex;
+    justify-content: stretch;
+  }
+  
+  .nice-number input {
+    vertical-align: middle;
+    -moz-appearance: textfield;
+    box-sizing: content-box;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .nice-number input::-webkit-inner-spin-button,
+  .nice-number input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  

@@ -160,9 +160,9 @@ function showProperties(obj) {
           "'></p>"
       );
       $("#moduleProperty-inner").append(
-        "<p><span>Clock Time:</span> <input class='objectPropertyAttribute' min='50' type='number' style='width:100px' step='10' name='changeClockTime'  value='" +
+        "<p><span>Clock Time(ms):</span> <div class='input-number--parent'><input class='objectPropertyAttribute input-number' min='50' type='number' step='10' name='changeClockTime'  value='" +
           simulationArea.timePeriod +
-          "'>ms</p>"
+          "'></div></p>"
       );
       $("#moduleProperty-inner").append(
         "<p><span>Clock Enabled:</span><label class='switch'> <input type='checkbox' " +
@@ -383,9 +383,13 @@ function escapeHtml(unsafe) {
         .replace(/'/g, "&#039;");
 }
 
+//* new addition
+
 $(document).tooltip({
     show: null,
     track: true,
     hide: false,
     tooltipClass: "custom-tooltip-styling",
   });
+
+  $( input[type='number'] ).spinner();
