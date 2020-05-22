@@ -667,10 +667,24 @@ input:checked + .slider:before {
 .custom-btn--primary:hover {
   background-color: #3ba374;
 }
+.custom-btn--secondary {
+  text-decoration: none;
+  border: 1px solid white !important;
+  background: transparent;
+  border-radius: 1px;
+  color: white !important;
+  width: 100%;
+}
+
+.custom-btn--secondary:focus,:hover {
+  outline: none;
+
+}
 
 .custom-btn--tertiary {
   background-color: #dc5656;
 }
+
 
 #HelpButton {
   background-color: transparent;
@@ -682,6 +696,12 @@ input:checked + .slider:before {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.btn-parent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 3px;
 }
 
 /* custom spin button */
