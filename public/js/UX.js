@@ -160,9 +160,9 @@ function showProperties(obj) {
           "'></p>"
       );
       $("#moduleProperty-inner").append(
-        "<p><span>Clock Time:</span> <input class='objectPropertyAttribute' min='50' type='number' style='width:100px' step='10' name='changeClockTime'  value='" +
+        "<p><span>Clock Time(ms):</span> <input class='objectPropertyAttribute' min='50' type='number' style='width:100px' step='10' name='changeClockTime'  value='" +
           simulationArea.timePeriod +
-          "'>ms</p>"
+          "'></p>"
       );
       $("#moduleProperty-inner").append(
         "<p><span>Clock Enabled:</span><label class='switch'> <input type='checkbox' " +
@@ -305,11 +305,7 @@ function showProperties(obj) {
             $("#moduleProperty-inner").append(s);
           } else if (obj.mutableProperties[attr].type == "button") {
             var s =
-<<<<<<< HEAD
               "<p class='btn-parent'><button class='objectPropertyAttribute btn custom-btn--secondary' type='button'  name='" +
-=======
-              "<p><button class='objectPropertyAttribute btn btn-primary btn-xs' type='button'  name='" +
->>>>>>> 0e9b2479e9e37adc6ccb7a398c0c0434f7cca0f1
               prop.func +
               "'>" +
               prop.name +
@@ -393,3 +389,8 @@ $(document).tooltip({
     hide: false,
     tooltipClass: "custom-tooltip-styling",
   });
+
+$(function(){
+    $("input[type='number']").inputSpinner();
+  });
+  
