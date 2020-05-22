@@ -601,12 +601,29 @@ div.icon img {
 
 .moduleProperty input,
 .moduleProperty select {
+<<<<<<< HEAD
   background-color: transparent;
+=======
+  background-color: transparent !important;
+>>>>>>> 017b8c767b0c9ed4890d11bcc30b1a288bebdc00
   border: none;
   border-bottom: 0.5px solid #bbbbbb;
   margin: auto;
   width: 100%;
   padding-left: 10px;
+<<<<<<< HEAD
+=======
+  color: white !important;
+  outline: none;
+}
+
+.moduleProperty input:focus,
+.moduleProperty select:focus {
+  outline-width: 0;
+  outline: none;
+  box-shadow: none;
+  border-color: white;
+>>>>>>> 017b8c767b0c9ed4890d11bcc30b1a288bebdc00
 }
 
 /* toogle */
@@ -697,7 +714,6 @@ input:checked + .slider:before {
   color: white;
 }
 
-
 #HelpButton {
   background-color: transparent;
   border: 1px solid white !important;
@@ -756,5 +772,14 @@ select > option:focus {
 
 /** input[type='number'] styling starts here */
 
+<<<<<<< HEAD
+=======
+input[type="number"]:focus {
+  background-color: transparent !important;
+  outline: none;
+  border: none !important;
+  color: white !important;
+}
+>>>>>>> 017b8c767b0c9ed4890d11bcc30b1a288bebdc00
 
 /*! input[type='number'] styling end here */
