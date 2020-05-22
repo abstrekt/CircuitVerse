@@ -160,9 +160,9 @@ function showProperties(obj) {
           "'></p>"
       );
       $("#moduleProperty-inner").append(
-        "<p><span>Clock Time(ms):</span> <div class='input-number--parent'><input class='objectPropertyAttribute input-number' min='50' type='number' step='10' name='changeClockTime'  value='" +
+        "<p><span>Clock Time:</span> <input class='objectPropertyAttribute' min='50' type='number' style='width:100px' step='10' name='changeClockTime'  value='" +
           simulationArea.timePeriod +
-          "'></div></p>"
+          "'>ms</p>"
       );
       $("#moduleProperty-inner").append(
         "<p><span>Clock Enabled:</span><label class='switch'> <input type='checkbox' " +
@@ -305,7 +305,11 @@ function showProperties(obj) {
             $("#moduleProperty-inner").append(s);
           } else if (obj.mutableProperties[attr].type == "button") {
             var s =
+<<<<<<< HEAD
               "<p class='btn-parent'><button class='objectPropertyAttribute btn custom-btn--secondary' type='button'  name='" +
+=======
+              "<p><button class='objectPropertyAttribute btn btn-primary btn-xs' type='button'  name='" +
+>>>>>>> 0e9b2479e9e37adc6ccb7a398c0c0434f7cca0f1
               prop.func +
               "'>" +
               prop.name +
@@ -319,7 +323,7 @@ function showProperties(obj) {
     var helplink = obj && obj.helplink;
     if (helplink) {
       $("#moduleProperty-inner").append(
-        '<p class="btn-parent" ><button id="HelpButton" class="btn btn-primary btn-xs" type="button" >Help &#9432</button></p>'
+        '<p class="help-btn-parent" ><button id="HelpButton" class="btn btn-primary btn-xs" type="button" >Help &#9432</button></p>'
       );
       $("#HelpButton").click(function () {
         window.open(helplink);
@@ -383,13 +387,9 @@ function escapeHtml(unsafe) {
         .replace(/'/g, "&#039;");
 }
 
-//* new addition
-
 $(document).tooltip({
     show: null,
     track: true,
     hide: false,
     tooltipClass: "custom-tooltip-styling",
   });
-
-  $( input[type='number'] ).spinner();

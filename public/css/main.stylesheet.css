@@ -462,19 +462,19 @@ div.icon img {
 
 /** custom scroll  styling starts here  */
 .customScroll {
-  scrollbar-width: thin; /* for firefox */
+    scrollbar-width: thin; /* for firefox */
 }
 
 .customScroll::-webkit-scrollbar {
-  margin-right: 3px;
-  width: 6px;
+    margin-right: 3px;
+    width: 6px;
 }
 .customScroll::-webkit-scrollbar-thumb {
-  background-color: #7d7d7d;
+    background-color: #7d7d7d;
 }
 
 .customScroll::-webkit-scrollbar-thumb:hover {
-  background-color: #454545;
+    background-color: #454545;
 }
 
 /** custom scroll  styling starts ends here  */
@@ -595,10 +595,6 @@ div.icon img {
   border: none;
 }
 
-#moduleProperty-inner:last-child {
-  margin-bottom: 15px !important;
-}
-
 .moduleProperty input,
 .moduleProperty select {
   background-color: transparent;
@@ -666,50 +662,26 @@ input:checked + .slider:before {
 .custom-btn--primary {
   font-weight: bold;
   background-color: #42b983;
-  color: white;
 }
 
 .custom-btn--primary:hover {
   background-color: #3ba374;
-  color: white;
-}
-
-.custom-btn--secondary {
-  background-color: transparent;
-  border: 1px solid white !important;
-  border-radius: 1px;
-  width: 90%;
-  color: white;
-  display: inline-block;
-  line-height: inherit;
-}
-
-.custom-btn--secondary:hover {
-  color: white;
 }
 
 .custom-btn--tertiary {
   background-color: #dc5656;
-  color: white;
-}
-
-.custom-btn--tertiary:hover {
-  color: white;
 }
 
 #HelpButton {
   background-color: transparent;
   border: 1px solid white !important;
   width: 90%;
-  margin-bottom: 15px !important;
-  margin-top: 15px !important;
 }
 
-.btn-parent {
+.help-btn-parent {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 0;
 }
 
 /* custom spin button */
@@ -735,60 +707,9 @@ select {
   background-origin: content-box;
 }
 
-select > option {
-  color: black;
-  padding: 2px 4px;
-}
-
-select:focus,
-select > option:focus {
-  border: none;
-  outline: none;
-}
-
 .moduleProperty select {
   padding-right: 10px;
   padding-left: 5px;
 }
 
 /*! selects styling end here */
-
-/** input type number styles starts here */
-.input-number--parent {
-
-}
-
-/* .input-number {
-    border: none;
-    outline: none;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
-}
-
-.input-number:hover,
-.input-number:focus {
-    background-color: #454545;
-    color: white;
-
-} */
-
-.nice-number {
-    display: inline-flex;
-    justify-content: stretch;
-  }
-  
-  .nice-number input {
-    vertical-align: middle;
-    -moz-appearance: textfield;
-    box-sizing: content-box;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .nice-number input::-webkit-inner-spin-button,
-  .nice-number input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  
