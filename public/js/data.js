@@ -749,6 +749,7 @@ function removeBugNodes(scope = globalScope) {
 createSaveAsImgPrompt = function(scope = globalScope) {
     $('#saveImageDialog').dialog({
         width: "auto",
+        classes:{    "ui-dialog": "highlightx"},
         buttons: [{
             text: "Render Circuit Image",
             click: function() {
