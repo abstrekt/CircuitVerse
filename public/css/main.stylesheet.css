@@ -73,7 +73,7 @@ html {
     overflow: hidden;
 }
 
-button:focus {
+button:::focus {
     outline: 0;
 }
 
@@ -81,7 +81,7 @@ a {
     color: var(--text-primary);
 }
 
-a:hover {
+a:::hover {
     text-decoration: none;
 }
 
@@ -90,13 +90,13 @@ select > option {
     padding: 2px 4px;
 }
 
-select:focus,
-select > option:focus {
+select:::focus,
+select > option::focus {
     border: none;
     outline: none;
 }
 
-input[type="number"]:focus {
+input[type="number"]::focus {
     background-color: transparent;
     outline: none;
     border: none;
@@ -127,12 +127,12 @@ button {
   box-shadow: none;
 }
 
-button:active {
+button:::active {
   background: transparent !important;
   box-shadow: none !important;
 }
 
-button:focus {
+button:::focus {
   box-shadow: none;
 }
 
@@ -157,7 +157,7 @@ button:focus {
     padding: 2px 8px;
 }
 
-.navbar-menu > li > a:hover {
+.navbar-menu > li > a:::hover {
     border: 1px solid var(--border-primary);
 }
 
@@ -175,7 +175,7 @@ button:focus {
     padding: 4px 10px;
 }
 
-.account-btn:hover {
+.account-btn::hover {
     border: 1px solid var(--border-primary);
     border-radius: 1px;
 }
@@ -184,7 +184,7 @@ button:focus {
     color: var(--text-primary);
 }
 
-.signIn-btn:hover {
+.signIn-btn::hover {
     color: var(--text-primary);
 }
 
@@ -299,7 +299,7 @@ button:focus {
     }
 }
 
-.dropdown > ul::before {
+.dropdown > ul:::before {
     background-color: transparent;
     content: "";
     width: 10px;
@@ -311,7 +311,7 @@ button:focus {
     transform: translate(-50%, -13px) rotate(-45deg);
 }
 
-.dropdown > ul::after {
+.dropdown > ul:::after {
     content: "";
     width: 11.5px;
     display: inline-block;
@@ -329,7 +329,7 @@ button:focus {
     margin: auto;
 }
 
-.dropdown-menu > li > a:hover {
+.dropdown-menu > li > a::hover {
     color: black !important;
     background: #cacaca 0% 0% no-repeat padding-box;
     border-radius: 7px;
@@ -370,7 +370,7 @@ button:focus {
     margin: auto;
 }
 
-#contextMenu ul li:hover {
+#contextMenu ul li::hover {
     color: black;
     background: #cacaca 0% 0% no-repeat padding-box;
     border-radius: 7px;
@@ -382,7 +382,7 @@ button:focus {
         background-color: rgba(69, 69, 69, 0.7);
         backdrop-filter: blur(10px);
     }
-    #contextMenu ul li:hover {
+    #contextMenu ul li::hover {
         backdrop-filter: blur(50px);
         -webkit-backdrop-filter: blur(50px);
     }
@@ -460,13 +460,13 @@ button:focus {
     border-radius: 0;
 }
 
-.panelHeader:hover {
+.panelHeader::hover {
     background-color: #7d7d7d;
     border-radius: 3px;
 }
 
-.panelHeader:after,
-.panelHeader:before {
+.panelHeader::after,
+.panelHeader::before {
     content: "";
     height: 11px;
     border: 1px solid var(--border-primary);
@@ -479,16 +479,16 @@ button:focus {
     transition: 0.5s ease-out;
 }
 
-.panelHeader:after {
+.panelHeader::after {
     transform: translateY(-50%) rotate(90deg);
 }
 
-.ui-accordion-header-active:before {
+.ui-accordion-header-active::before {
     height: 0;
     transition: 0.5s ease-out;
 }
 
-.ui-accordion-header-active:hover {
+.ui-accordion-header-active::hover {
     background-color: transparent;
 }
 
@@ -532,7 +532,7 @@ div.icon img {
     font-weight: 100;
 }
 
-.icon:hover {
+.icon::hover {
     background-color: #707070;
     border-radius: 3px;
 }
@@ -553,7 +553,7 @@ div.icon img {
     background-color: #7d7d7d;
 }
 
-.customScroll::-webkit-scrollbar-thumb:hover {
+.customScroll::-webkit-scrollbar-thumb::hover {
     background-color: #454545;
 }
 
@@ -694,8 +694,8 @@ div.icon img {
     outline: none;
 }
 
-.moduleProperty input:focus,
-.moduleProperty select:focus {
+.moduleProperty input::focus,
+.moduleProperty select::focus {
     outline-width: 0;
     outline: none;
     box-shadow: none;
@@ -731,7 +731,7 @@ div.icon img {
     box-shadow: inset 0px 0px 5px rgba(69, 69, 69, 0.255);
 }
 
-.slider:before {
+.slider::before {
     position: absolute;
     content: "";
     height: 20px;
@@ -750,7 +750,7 @@ input:checked + .slider {
     background-color: #42b983;
 }
 
-input:checked + .slider:before {
+input:checked + .slider::before {
     transform: translate(21px, -51%);
 }
 
@@ -763,7 +763,7 @@ input:checked + .slider:before {
     border-radius: 1px;
 }
 
-.custom-btn--primary:hover {
+.custom-btn--primary::hover {
     background-color: #3ba374;
     color: white;
     border-radius: 1px;
@@ -779,7 +779,7 @@ input:checked + .slider:before {
     line-height: inherit;
 }
 
-.custom-btn--secondary:hover {
+.custom-btn--secondary::hover {
     color: white;
 }
 
@@ -789,7 +789,7 @@ input:checked + .slider:before {
     border-radius: 1px;
 }
 
-.custom-btn--tertiary:hover {
+.custom-btn--tertiary::hover {
     color: white;
 }
 
@@ -865,7 +865,7 @@ select {
     height: 100%;
 }
 
-#layoutDialog > div span:before {
+#layoutDialog > div span::before {
     color: white;
 }
 
@@ -978,7 +978,7 @@ select {
     transform: translateY(-50%);
 }
 
-.custom-radio span:after {
+.custom-radio span::after {
     content: "";
     height: 8px;
     width: 8px;
@@ -992,7 +992,7 @@ select {
     transition: 300ms ease-in-out 0s;
 }
 
-.custom-radio input[type="radio"]:checked ~ span:after {
+.custom-radio input[type="radio"]:checked ~ span::after {
     transform: translate(-50%, -50%) scale(1);
 }
 
@@ -1096,7 +1096,7 @@ select {
     visibility: hidden;
 }
 
-.down-dialog--btn:after {
+.down-dialog--btn::after {
     content: "";
     display: block;
     position: absolute;
@@ -1107,11 +1107,11 @@ select {
     transform: translate(-10%, -60%);
 }
 
-.down-dialog--btn:before:hover {
+.down-dialog--btn::before::hover {
     background-color: #454545;
 }
 
-.down-dialog--btn:hover {
+.down-dialog--btn::hover {
     border: none;
 }
 
@@ -1141,16 +1141,16 @@ select {
     border: 1px solid white;
 }
 
-.render-btn:active {
+.render-btn::active {
   border: 1px solid white;
 }
 
-.render-btn:hover {
+.render-btn::hover {
     background: #3ba374;
     color: white;
 }
 
-.ui-dialog .ui-dialog-buttonpane button:hover {
+.ui-dialog .ui-dialog-buttonpane button::hover {
     color: white;
 }
 
@@ -1252,7 +1252,7 @@ select {
     border: 3px solid white;
 }
 
-#openProjectDialog > label > span:after {
+#openProjectDialog > label > span::after {
     background: white;
 }
 
