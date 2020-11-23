@@ -448,9 +448,9 @@ export default class Node {
             }
         }
         var colorNode = colors['stroke'];
-        const colorNodeConnect = colors['color_wire_con']
-        const colorNodePow = colors['color_wire_pow']
-        const colorNodeLose = colors['color_wire_lose']
+        const colorNodeConnect = colors["node-alt"];
+        const colorNodePow = colors["node-alt"];
+        const colorNodeLose = colors["node-alt"];
         const colorNodeSelected = colors['node'];
 
         if (this.bitWidth == 1) colorNode = [colorNodeConnect, colorNodePow][this.value];

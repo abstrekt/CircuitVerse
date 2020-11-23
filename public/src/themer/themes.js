@@ -34,6 +34,7 @@ export default {
         "--cus-btn-hov--bg": "#ddd",
         "--cus-btn-hov-text": "#000",
         "--node": "green",
+        "--node-alt": "#00c838",
         "--stroke": "black",
         "--fill": "white",
         "--hover-and-sel": "rgba(255, 255, 32, 0.8)",
@@ -86,6 +87,7 @@ export default {
         "--cus-btn-hov--bg": "#48a69d",
         "--cus-btn-hov-text": "#fff",
         "--node": "#285963",
+        "--node-alt": "#4292a3",
         "--stroke": "#35aea9",
         "--fill": "#DEFFFE",
         "--hover-and-sel": "#E3B924",
@@ -140,6 +142,7 @@ export default {
         "--canvas-fill": "white", //canvas bg
         "--canvas-stroke": "#BABABA", //canvas stroke
         "--node": "#42B983",
+        "--node-alt": "#3cd7b8",
         "--stroke": "#6B6B6B",
         "--fill": "#EAEAEB",
         "--hover-and-sel": "#FFE99B", //yellow
@@ -194,6 +197,7 @@ export default {
         "--canvas-fill": "white", //canvas bg
         "--canvas-stroke": "#BABABA", //canvas stroke
         "--node": "#42B983",
+        "--node-alt": "#3cd7b8",
         "--stroke": "#6B6B6B",
         "--fill": "#EAEAEB",
         "--hover-and-sel": "#FFE99B", //yellow
@@ -248,6 +252,7 @@ export default {
         "--canvas-fill": "black", //canvas bg
         "--canvas-stroke": "#9ad5e9", //canvas stroke
         "--node": "#26a841",
+        "--node-alt": "#60cb71",
         "--stroke": "#626262",
         "--fill": "#d4d4d4",
         "--hover-and-sel": "#ffdf6c", //yellow
@@ -302,6 +307,7 @@ export default {
         "--canvas-fill": "#fff", //canvas bg
         "--canvas-stroke": "#8d88ad", //canvas stroke
         "--node": "#c59434",
+        "--node-alt": "#e2c68f",
         "--stroke": "#342a1f",
         "--fill": "#e0dcd3",
         "--hover-and-sel": "#f4d4d4", //yellow

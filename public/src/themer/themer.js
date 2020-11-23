@@ -23,6 +23,7 @@ const getCanvasColors = () => {
   colors["color_wire"] = getComputedStyle(document.documentElement).getPropertyValue('--wire-norm');
   colors["text"] = getComputedStyle(document.documentElement).getPropertyValue('--text');
   colors["node"] = getComputedStyle(document.documentElement).getPropertyValue('--node');
+  colors["node-alt"] = getComputedStyle(document.documentElement).getPropertyValue('--node-alt');
   colors["node_norm"] = getComputedStyle(document.documentElement).getPropertyValue('--node-norm');
   colors["splitter"] = getComputedStyle(document.documentElement).getPropertyValue('--splitter');
   colors["out_rect"] = getComputedStyle(document.documentElement).getPropertyValue('--output-rect');
