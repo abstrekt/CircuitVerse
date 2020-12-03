@@ -3,7 +3,7 @@ name: docs
 on:
   push:
     branches:
-      - setting-up-webpacker
+      - master
 
 jobs:
   deploy:
@@ -11,16 +11,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - name: jsdocs-dep
+        run: npm install
       - name: jsdocs-action
         uses: andstor/jsdoc-action@v1.2.0
         with:
           source_dir: ./public/src
+          recurse: true
           output_dir: ./out
           config_file: ./conf.json
           template: better-docs
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+          cname: simulator-docs.circuitverse.org

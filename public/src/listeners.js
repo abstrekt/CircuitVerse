@@ -21,19 +21,6 @@ import { verilogModeGet } from './Verilog2CV';
 import { setupTimingListeners } from './plotArea';
 
 var unit = 10;
-var createNode = false; // Flag to create node when its value ==tru)e
-export function createNodeSet(param) {
-    createNode = param;
-}
-export function createNodeGet(param) {
-    return createNode;
-}
-
-var stopWire = true; // flag for stopoing making Nodes when the second terminal reaches a Node (closed path)
-export function stopWireSet(param) {
-    stopWire = param;
-}
-
 
 export default function startListeners() {
     $('#deleteSelected').on('click',() => {
@@ -62,10 +49,18 @@ export default function startListeners() {
             document.getElementById("projname").select();
         }, 100);
     });
+    /* Makes tabs reordering possible by making them sortable */
+    $("#tabsBar").sortable({
+        containment: 'parent',
+        items: '> div',
+        revert: false,
+        opacity: 0.5,
+        tolerance: 'pointer',
+        placeholder: 'placeholder',
+        forcePlaceholderSize: true,
+    });
 
     document.getElementById('simulationArea').addEventListener('mousedown', (e) => {
-        createNodeSet(true);
-        stopWireSet(false);
         simulationArea.mouseDown = true;
 
         // Deselect Input
@@ -162,15 +157,9 @@ export default function startListeners() {
             updatePositionSet(true);
             simulationArea.shiftDown = e.shiftKey;
 
-            //  stop making wires when we connect the 2nd termial to a node
-            if (stopWire) {
-                createNodeSet(false);
-            }
-
             if (e.key == 'Meta' || e.key == 'Control') {
                 simulationArea.controlDown = true;
             }
-
 
             // zoom in (+)
             if ((simulationArea.controlDown && (e.keyCode == 187 || e.keyCode == 171)) || e.keyCode == 107) {
@@ -200,8 +189,16 @@ export default function startListeners() {
 
 
             if (simulationArea.lastSelected && simulationArea.lastSelected.keyDown) {
-                if (e.key.toString().length == 1 || e.key.toString() == 'Backspace') {
+                if (e.key.toString().length == 1 || e.key.toString() == 'Backspace' || e.key.toString() == 'Enter') {
                     simulationArea.lastSelected.keyDown(e.key.toString());
+                    e.cancelBubble = true;
+                    e.returnValue = false;
+
+                    //e.stopPropagation works in Firefox.
+                    if (e.stopPropagation) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                    }
                     return;
                 }
             }
@@ -246,7 +243,6 @@ export default function startListeners() {
 
             // deselect all Shortcut
             if (e.keyCode == 27) {
-            $('input').blur();
                 simulationArea.multipleObjectSelections = [];
                 simulationArea.lastSelected = undefined;
                 e.preventDefault();
@@ -265,7 +261,7 @@ export default function startListeners() {
         if (e.keyCode == 8 || e.key == 'Delete') {
             deleteSelected();
         }
-    });
+    }, true);
 
 
     document.getElementById('simulationArea').addEventListener('dblclick', (e) => {
@@ -315,7 +311,6 @@ export default function startListeners() {
 
             // Updated restricted elements
             updateRestrictedElementsInScope();
-
             localStorage.setItem('clipboardData', textToPutOnClipboard);
             e.preventDefault();
             if (textToPutOnClipboard == undefined) return;
@@ -342,7 +337,6 @@ export default function startListeners() {
 
             // Updated restricted elements
             updateRestrictedElementsInScope();
-
             localStorage.setItem('clipboardData', textToPutOnClipboard);
             e.preventDefault();
             if (textToPutOnClipboard == undefined) return;
@@ -488,7 +482,6 @@ function onMouseMove(e) {
 }
 
 function onMouseUp(e) {
-    createNodeSet(simulationArea.controlDown);
     simulationArea.mouseDown = false;
     if (!lightMode) {
         updatelastMinimapShown();
